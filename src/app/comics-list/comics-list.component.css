@@ -1,0 +1,61 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+
+.comic-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.cards {
+    margin: 1.5rem;
+    position: relative;
+    top: 8rem;
+    background: rgb(85, 85, 85);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: center;
+    border: 3px solid black;
+}
+
+
+.cover {
+    display: block;
+    bottom: auto;
+    height: 50rem;
+    padding: 1rem;
+}
+
+a {
+    text-decoration: none;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+        1px 1px 0 #000;
+    color: darkkhaki;
+    text-align: center;
+}
+
+a:hover,
+a:active
+ {
+    text-decoration: none;
+    color: white;
+}
+
+.comic-title {
+    max-width: 330px;
+    text-align: center;
+    align-self: flex-end;
+    padding: 1rem;
+    font-size: 3rem;
+}

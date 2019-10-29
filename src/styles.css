@@ -1,0 +1,17 @@
+body {
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), 
+    rgba(0, 0, 0, 0.45)), url("https://external-preview.redd.it/Kg4Vp8is0tdeLhPtIeIw0LFqPQBEF87O0l6rB6AOMwY.jpg?auto=webp&s=0cb1ac69a23c70e64bf563f9bc46c48ad9b03912")
+    
+}
+
+.grid-container {
+    display: grid;
+}
+
+.grid1 {
+    grid-column: 1/span 5;
+    background-color: darkred;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

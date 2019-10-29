@@ -1,0 +1,42 @@
+body {
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.45), 
+    rgba(0, 0, 0, 0.45)), 
+    url("https://external-preview.redd.it/Kg4Vp8is0tdeLhPtIeIw0LFqPQBEF87O0l6rB6AOMwY.jpg?auto=webp&s=0cb1ac69a23c70e64bf563f9bc46c48ad9b03912");
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: darkred;
+    border: 3px solid black;
+    border-style: none none solid none; 
+    height: 7rem;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+
+.grid1 {
+    font-family: 'Bangers', cursive;
+    text-shadow: #000 4px 4px 0px;
+    font-size: 5rem;
+    color:white;
+    padding-left: 5rem;
+    text-align: left;
+    flex-grow: 2;
+}
+
+.grid2 {
+    padding-right: 5rem;
+    color: khaki;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
