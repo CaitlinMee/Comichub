@@ -210,6 +210,15 @@ body {
         right: .7rem;
     }
 
+    .modal-title {
+        font-size: 2rem;
+    }
+
+    .modal-body {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -260,6 +269,12 @@ body {
         text-align: center;
     }
 
+
+    .footerbutton {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     @media (max-width: 330px) {
 
         .row {
@@ -276,7 +291,6 @@ body {
             margin-left: auto;
             margin-right: auto;
         }
-
-            
-        }
+        
+    }
 } 
