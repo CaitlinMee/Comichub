@@ -13,7 +13,9 @@ export class RestApiService {
   // Define API
   apiURL = 'https://propertymecomics.s3.amazonaws.com';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    
+  }
 
   /*========================================
     CRUD Methods for consuming RESTful API
@@ -51,25 +53,25 @@ export class RestApiService {
       retry(1),
       catchError(this.handleError)
     )
-  }  
-
-  // HttpClient API put() method => Update Comic
-  updateComic(id, Comic): Observable<Comics> {
-    return this.http.put<Comics>(this.apiURL + '/comics/' + id, JSON.stringify(Comic), this.httpOptions)
-    .pipe(
-      retry(1),
-      catchError(this.handleError)
-    )
   }
+
+  // // HttpClient API put() method => Update Comic
+  // updateComic(id, Comic): Observable<Comics> {
+  //   return this.http.put<Comics>(this.apiURL + '/comics/' + id, JSON.stringify(Comic), this.httpOptions)
+  //   .pipe(
+  //     retry(1),
+  //     catchError(this.handleError)
+  //   )
+  // }
 
   // HttpClient API delete() method => Delete Comic
   deleteComic(id){
     return this.http.delete<Comics>(this.apiURL + '/comics/' + id, this.httpOptions)
-    .pipe(
-      retry(1),
-      catchError(this.handleError)
-    )
-  }
+     .pipe(
+       retry(1),
+       catchError(this.handleError)
+     )
+   }
 
   // Error handling 
   handleError(error) {

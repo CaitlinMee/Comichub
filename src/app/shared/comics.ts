@@ -1,4 +1,4 @@
-export interface Comics {
+export class Comics {
     id:          string;
     slug:        string;
     name:        string;
@@ -11,7 +11,7 @@ export interface Comics {
     characters:  Character[];
 }
 
-export interface Character {
+export class Character {
     id:            string;
     name:          string;
     description:   string;

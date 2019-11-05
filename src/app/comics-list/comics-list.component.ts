@@ -18,19 +18,19 @@ export class ComicsListComponent implements OnInit {
       this.loadComics()
     }
   
-    // Get employees list
+    // Get comics list
     loadComics() {
       return this.restApi.getComics().subscribe((data: {}) => {
         this.Comics = data;
       })
     }
   
-    // Delete employee
-    deleteComics(id) {
-      if (window.confirm('Are you sure, you want to delete?')){
-        this.restApi.deleteComic(id).subscribe(data => {
-          this.loadComics()
-        })
-      }
-    }  
+    // Delete comic
+    // deleteComics(id) {
+    //   if (window.confirm('Are you sure, you want to delete?')){
+    //     this.restApi.deleteComic(id).subscribe(data => {
+    //       this.loadComics()
+    //     })
+    //   }
+    // }  
     }

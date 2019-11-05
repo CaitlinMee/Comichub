@@ -8,6 +8,7 @@ import { ComicUpdateComponent } from './comic-update/comic-update.component';
 import { ComicsListComponent } from './comics-list/comics-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -15,7 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
+    FormsModule,
   ],
   declarations: [
     AppComponent,
@@ -23,8 +24,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ComicDetailsComponent,
     ComicUpdateComponent,
     ComicsListComponent,
-
   ],
+  
+  exports: [
+    ComicCreateComponent,
+  ],
+  
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}

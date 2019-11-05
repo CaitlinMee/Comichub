@@ -23,11 +23,13 @@ body {
     grid-row: 1/span 2;
 }
 
-
-
 .info {
         grid-column-start: 2;
         padding-left: 3rem;
+}
+
+.info h2 {
+    margin-top: 0;
 }
 
 .character-container {
@@ -44,18 +46,39 @@ body {
     margin-top: 3rem;
 }
 
+.headerbutton {
+    background-color: darkred;
+    align-self: center;
+    color: black;
+    border: none;
+    padding: 0;
+}
+
 .charactersheader h2 {
     margin-top: 1rem;
     margin-left: 2.5rem;
     font-size: 3rem;
+    align-self: center;
+}
+
+.charbutton {
+    background: rgb(85, 85, 85);
+    border: 3px solid black;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    margin: 1.5rem;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: flex-end;
+    color: white;
 }
 
 .charactercards {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;  
 }
 
 .cards {
@@ -64,10 +87,40 @@ body {
     background: rgb(85, 85, 85);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     border: 3px solid black;
     text-align: center;
+    width: 45%
+}
+
+.cardgrid{
+    display: grid;
+    padding: 2rem;
+}
+
+.gridinfo {
+    padding: 2rem;
+    column-span: 1/1;
+}
+
+
+.cards h6 {
+    font-size: 2rem;
+}
+
+.cards img {
+    height: 250px;
+}
+
+
+.description {
+    padding-left: 2rem;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    grid-column-start: 2;
 }
 
 .backdrop {
@@ -79,17 +132,11 @@ body {
     height:100vh;
 }
 
-.charbutton {
-    background: rgb(85, 85, 85);
-    border: 3px solid black;
-    height: 150px;
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    margin: 1.5rem;
-    justify-content: space-evenly;
-    align-items: center;
-    color: white;
+.removebutton {
+    background: rgba(85, 85, 85, 0);
+    top: auto;
+    height: 2rem;
+    width: 2rem;
 }
 
 .glyphicon.gylphicon-plus {
@@ -111,6 +158,12 @@ body {
     color: white;
 }
 
+.modalheader {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 0;
+}
+
 .modal-title {
     text-shadow: #000 2px 2px 0px;
     font-size: 3rem;
@@ -119,9 +172,93 @@ body {
 
 .modal-footer {
     display: flex;
+    align-items: flex-end;
+    padding-bottom: 0;
+    padding-right: 0;
 }
 
-.modal-footer .button {
-    background-color: white;
+.footerbutton {
+    background: rgb(85, 85, 85);
+    border: 3px solid black;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    margin: 1.5rem;
+    justify-content: space-evenly;
     align-self: center;
+    color: white;
+    margin: 0;
+}
+
+@media (max-width: 786px) {
+
+    .charactercards {
+        flex-direction: column; 
+    }
+
+    .cards {
+        width: 95%
+    }
+
+    .cardgrid {
+        padding: .3rem;
+    }
+
+    .removebutton {
+        position: relative;
+        bottom: 1rem;
+        right: .7rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 98%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .comicinfo {
+        padding: 1rem;
+    }
+
+    .imgcover {
+        margin: auto;
+    }
+
+    .info {
+        grid-column-start: 1;
+        grid-row-start: 3;
+        padding-left: 0;
+    }
+    
+    .info h2 {
+        text-align: center;
+    }
+
+    .generalinfo {
+        grid-column: 1/span 2;
+        display: flex;
+        padding: auto;
+        margin: auto;
+    }
+
+   .mobile {
+        flex-direction: column;
+        text-align: left;
+        align-self: flex-end;
+        padding-left: 2rem;
+    }
+
+    .description {
+        grid-row-start: 2;
+        grid-column: 1/span 2;
+        padding: 2rem;
+        text-align: center;
+    }
+
+
+      
 }

@@ -31,12 +31,23 @@ body {
     flex-grow: 2;
 }
 
-.grid2 {
-    padding-right: 5rem;
+a {
+    text-decoration: none;
     color: khaki;
     text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+.grid2 {
+    padding-right: 5rem;
+    
+}
+
+a:hover,
+a:active {
+    text-decoration: none;
+    color: white;
 }

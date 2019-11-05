@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Comics, Character } from "../shared/Comics";
 import { RestApiService } from '../shared/rest-api.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
-
 
 @Component({
   selector: 'comic-details',
@@ -10,13 +10,14 @@ import { Location } from '@angular/common';
   styleUrls: ['./comic-details.component.css']
 })
 export class ComicDetailsComponent implements OnInit {
-  comic: {};
+  comic: Comics;
   display = 'none';
 
   constructor(
     private route: ActivatedRoute,
-    private restApi: RestApiService,
-    private location: Location
+    public restApi: RestApiService,
+    private location: Location,
+    public router: Router
   ) { }
 
   ngOnInit() {
@@ -49,8 +50,25 @@ export class ComicDetailsComponent implements OnInit {
     var description = (<HTMLInputElement>document.getElementById('description')).value;
     var imageURL = (<HTMLInputElement>document.getElementById('imageurl')).value;
 
-    alert("Not Implemented for " + characterName);
+    var newCharacterId = this.comic.characters.length;
+
+    let newCharacter = new Character();
+    newCharacter.id = newCharacterId.toString();
+    newCharacter.name = characterName;
+    newCharacter.description = description;
+    newCharacter.image = imageURL;
+    newCharacter.numberOfRoles = "1";
+
+    this.comic.characters.push(newCharacter);
+  
     this.display='none';
+    alert(characterName + "Successfully Added to Comic");
+  }
+
+  onDeleteHandled(characterId){
+    this.comic.characters.splice(characterId, 1);
+    this.display='none';
+    alert("Successfully Removed from Comic");
   }
 
 }
