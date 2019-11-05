@@ -262,7 +262,20 @@ body {
 
     @media (max-width: 330px) {
 
+        .row {
+            display: flex;
+            flex-flow: column;    
+        }
+
+        .charactersheader h2 {
+            margin-left: auto;
+            margin-right: auto;
+        }
         
+        .charbutton {
+            margin-left: auto;
+            margin-right: auto;
+        }
 
             
         }
