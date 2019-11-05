@@ -51,3 +51,27 @@ a:active {
     text-decoration: none;
     color: white;
 }
+
+@media (max-width: 500px) {
+
+    .header-container {
+        flex-flow: column;
+        height: 15rem;
+    }
+
+    .grid1 {
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .grid2 {
+        padding-right: 0;
+        text-align: center;
+        margin-top: 0;
+        
+    }
+
+
+      
+}

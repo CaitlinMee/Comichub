@@ -24,13 +24,4 @@ export class ComicsListComponent implements OnInit {
         this.Comics = data;
       })
     }
-  
-    // Delete comic
-    // deleteComics(id) {
-    //   if (window.confirm('Are you sure, you want to delete?')){
-    //     this.restApi.deleteComic(id).subscribe(data => {
-    //       this.loadComics()
-    //     })
-    //   }
-    // }  
-    }
+  }

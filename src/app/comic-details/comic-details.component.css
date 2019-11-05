@@ -56,7 +56,7 @@ body {
 
 .charactersheader h2 {
     margin-top: 1rem;
-    margin-left: 2.5rem;
+    margin-left: 4.5rem;
     font-size: 3rem;
     align-self: center;
 }
@@ -215,6 +215,7 @@ body {
 @media (max-width: 500px) {
 
     .container {
+        padding-top: 18rem;
         width: 98%;
         padding-left: 0;
         padding-right: 0;
@@ -259,6 +260,10 @@ body {
         text-align: center;
     }
 
+    @media (max-width: 330px) {
 
-      
-}
+        
+
+            
+        }
+} 

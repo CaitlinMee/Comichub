@@ -7,7 +7,6 @@ import { ComicsListComponent } from './comics-list/comics-list.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/comics-list' },
-  // { path: '', pathMatch: 'full', redirectTo: 'create-comic' },
   { path: 'create-comic', component: ComicCreateComponent },
   { path: 'comic-details/:id', component: ComicDetailsComponent,},
   { path: 'update-comic', component: ComicUpdateComponent },

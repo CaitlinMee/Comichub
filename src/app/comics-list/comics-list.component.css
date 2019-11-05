@@ -73,3 +73,9 @@ a:active
     color: white;
     padding-left: 1rem;
 }
+
+@media (max-width: 500px) {
+    .cards {
+        top: 16rem;
+    }
+}
