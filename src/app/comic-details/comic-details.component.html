@@ -1,7 +1,7 @@
 <div *ngIf="comic" style="color: white;" class="container" >
     <div class="comicinfo">
         <img src="{{comic.image}}" class="imgcover">
-            <div class="info">              
+            <div class="info">
                 <h2>{{comic.name | uppercase}}</h2>
                 <p>{{comic.description}}</p>
             </div>
@@ -15,25 +15,7 @@
                             <h6 class="buttontext">Add Character</h6>
                     </button>
             </div>
-            <div class="charactercards">
-                <div *ngFor="let c of comic.characters" class="cards">
-                    <div class="cardgrid">
-                        <div class="generalinfo">
-                            <img height="150px" width="150px" src="{{c.image}}" alt="No Image Found">
-                                <div class="mobile">
-                                    <h6>{{c.name}}</h6>
-                                    <p> Number of roles</p>
-                                    <p>{{c.numberOfRoles}}</p>
-                                    <button class="btn removebutton" (click)="onDeleteHandled(c.id)">
-                                        <span class="glyphicon glyphicon-remove"></span>
-                                    </button>
-                                </div>
-                            </div>
-                            <p class="description">{{c.description}}</p>
-                        </div>  
-                    </div>
-                </div>
-            </div>
+            <character-info></character-info>
         </div>
     </div>
 

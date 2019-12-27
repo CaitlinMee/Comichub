@@ -6,11 +6,11 @@ import { ComicUpdateComponent } from './comic-update/comic-update.component';
 import { ComicsListComponent } from './comics-list/comics-list.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/comics-list' },
+  { path: '', pathMatch: 'full', redirectTo: '/home' },
   { path: 'create-comic', component: ComicCreateComponent },
   { path: 'comic-details/:id', component: ComicDetailsComponent,},
   { path: 'update-comic', component: ComicUpdateComponent },
-  { path: 'comics-list', component: ComicsListComponent }  
+  { path: 'home', component: ComicsListComponent },
 ];
 
 @NgModule({

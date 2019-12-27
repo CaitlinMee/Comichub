@@ -1,0 +1,18 @@
+<div *ngIf="character" class="charactercards">
+    <div *ngFor="let c of comic.characters" class="cards">
+        <div class="cardgrid">
+            <div class="generalinfo">
+                <img height="150px" width="150px" src="{{c.image}}" alt="No Image Found">
+                    <div class="mobile">
+                        <h6>{{c.name}}</h6>
+                        <p> Number of roles</p>
+                        <p>{{c.numberOfRoles}}</p>
+                        <button class="btn removebutton" (click)="onDeleteHandled(c.id)">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </button>
+                    </div>
+                </div>
+            <p class="description">{{c.description}}</p>
+        </div>
+    </div>
+</div>

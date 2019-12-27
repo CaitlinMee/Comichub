@@ -60,7 +60,7 @@ export class ComicDetailsComponent implements OnInit {
     newCharacter.numberOfRoles = "1";
 
     this.comic.characters.push(newCharacter);
-  
+
     this.display='none';
     alert(characterName + "Successfully Added to Comic");
   }
