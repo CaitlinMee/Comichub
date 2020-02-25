@@ -9,12 +9,11 @@ import { retry, catchError } from 'rxjs/operators';
 })
 
 export class RestApiService {
-  
+
   // Define API
   apiURL = 'https://propertymecomics.s3.amazonaws.com';
 
-  constructor(private http: HttpClient) { 
-    
+  constructor(private http: HttpClient) {
   }
 
   /*========================================
@@ -26,10 +25,10 @@ export class RestApiService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
-  }  
+  }
 
   // HttpClient API get() method => Fetch Comics list
-  getComics(): Observable<Comics> { 
+  getComics(): Observable<Comics> {
     return this.http.get<Comics>(this.apiURL + '/comics')
     .pipe(
       retry(1),
@@ -44,7 +43,7 @@ export class RestApiService {
       retry(1),
       catchError(this.handleError)
     )
-  }  
+  }
 
   // HttpClient API post() method => Create Comic
   createComic(Comic): Observable<Comics> {
@@ -64,7 +63,7 @@ export class RestApiService {
      )
    }
 
-  // Error handling 
+  // Error handling
   handleError(error) {
      let errorMessage = '';
      if(error.error instanceof ErrorEvent) {

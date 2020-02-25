@@ -64,7 +64,6 @@ a:active
 }
 
 .descriptiontext {
-    
     display: flex;
     align-items: flex-start;
     text-align: center;
@@ -72,6 +71,7 @@ a:active
     text-align: left;
     color: white;
     padding-left: 1rem;
+    padding-bottom: 5rem;
 }
 
 @media (max-width: 500px) {

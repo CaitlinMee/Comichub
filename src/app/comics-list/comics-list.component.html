@@ -8,12 +8,12 @@
 
 <body>
       <div class="comic-container">
-        <div *ngFor="let c of Comics" class="cards">
-            <a routerLink="/comic-details/{{c.id}}">
-              <img class="cover" src="{{c.image}}" alt="No Image Found">
-              <h4 class="comic-title">{{c.name}}</h4></a>
+        <div *ngFor="let comic of Comics" class="cards">
+            <a routerLink="/comic-details/{{comic.id}}">
+              <img class="cover" src="{{comic.image}}" alt="No Image Found">
+              <h4 class="comic-title">{{comic.name}}</h4></a>
               <div class="description">
-              <p class="descriptiontext" >{{c.description | truncate}}</p>
+              <p class="descriptiontext" >{{comic.description | truncate}}</p>
               </div>
             </div>
       </div>
