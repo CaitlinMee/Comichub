@@ -9,7 +9,7 @@ import { ComicsListComponent, TruncatePipe } from './comics-list/comics-list.com
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
-import { CharacterInfoComponent } from './character-info/character-info.component';
+import { CharacterInfoComponent } from "./character-info/Character-Info.Component";
 
 
 @NgModule({
