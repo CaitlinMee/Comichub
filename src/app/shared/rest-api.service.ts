@@ -45,6 +45,14 @@ export class RestApiService {
     )
   }
 
+  getCharacters(): Observable<Character> {
+    return this.http.get<Character>(this.apiURL + "/characters")
+    .pipe(
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
+
   // HttpClient API post() method => Create Comic
   createComic(Comic): Observable<Comics> {
     return this.http.post<Comics>(this.apiURL + '/comics', JSON.stringify(Comic), this.httpOptions)

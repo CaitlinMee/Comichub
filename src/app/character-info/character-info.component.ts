@@ -39,7 +39,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RestApiService } from '../shared/rest-api.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Comics, Character } from "../shared/Comics";
 
 @Component({
   selector: 'character-info',
@@ -48,15 +47,23 @@ import { Comics, Character } from "../shared/Comics";
 })
 export class CharacterInfoComponent implements OnInit {
 
-  character:any;
+  Comics: {};
 
-  constructor(public rest:RestApiService, private route: ActivatedRoute, private router: Router) { }
+  constructor(
+    public rest:RestApiService,
+    public restApi: RestApiService,
+    private route: ActivatedRoute,
+    private router: Router) { }
 
-  ngOnInit() {
-    this.rest.getComic(this.route.snapshot.params['id']).subscribe((data: {}) => {
-      console.log(data);
-      this.character = data;
-    });
+    ngOnInit() {
+      this.loadComics()
+    }
+
+    // Get comics list
+    loadComics() {
+      return this.restApi.getComics().subscribe((data: {}) => {
+        this.Comics = data;
+      })
+    }
   }
 
-}
