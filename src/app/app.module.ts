@@ -10,7 +10,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { CharacterInfoComponent } from "./character-info/Character-Info.Component";
+import { RouterModule, Routes } from '@angular/router';
 
+const appRoutes: Routes = [
+  { path: 'comic-create', component: ComicCreateComponent },
+
+]
 
 @NgModule({
   imports: [
@@ -19,6 +24,7 @@ import { CharacterInfoComponent } from "./character-info/Character-Info.Componen
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    RouterModule,
   ],
   declarations: [
     AppComponent,
@@ -31,7 +37,6 @@ import { CharacterInfoComponent } from "./character-info/Character-Info.Componen
   ],
 
   exports: [
-    ComicCreateComponent,
   ],
 
   bootstrap: [ AppComponent ]
