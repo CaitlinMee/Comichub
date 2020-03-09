@@ -12,6 +12,7 @@ import { Location } from '@angular/common';
 export class ComicDetailsComponent implements OnInit {
   comic: Comics;
   display = 'none';
+  characters: Character;
 
   constructor(
     private route: ActivatedRoute,

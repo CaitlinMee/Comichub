@@ -12,7 +12,7 @@
                 <h2>Characters</h2>
                 <comic-create></comic-create>
             </div>
-            <character-info [character]="character"></character-info>
+            <character-info *ngFor="let character of comic.characters" [characters]="characters"></character-info>
         </div>
     </div>
 

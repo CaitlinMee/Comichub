@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Comics, Character } from "../shared/Comics";
 import { ActivatedRoute, Router } from '@angular/router';
 import { RestApiService } from '../shared/rest-api.service';
@@ -10,28 +10,12 @@ import { Location } from '@angular/common';
   templateUrl: './character-info.component.html',
   styleUrls: ['./character-info.component.css']
 })
-export class CharacterInfoComponent implements OnInit {
-  comic: Comics;
- @Input() character: Character;
-  display = 'none';
+export class CharacterInfoComponent{
+ @Input() characters: Character;
 
-  constructor(
-    private route: ActivatedRoute,
-    public restApi: RestApiService,
-    private location: Location,
-    public router: Router
-  ) { }
+ @Output() charactersEvent = new EventEmitter();
 
-  ngOnInit() {
-    this.getComic();
-  }
-
-  getComic() {
-    // Get Comic Id and set to array element number
-    var id = +this.route.snapshot.paramMap.get('id');
-    id--;
-    return this.restApi.getComics().subscribe((data: {}) => {
-      this.comic = data[id];
-    })
-  }
+ sendcharacters() {
+   this.charactersEvent.emit(this.characters);
+ }
 }
